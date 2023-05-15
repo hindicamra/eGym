@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:egym_flutter/app/models/user.dart';
+import 'package:egym_ui_mobile/app/models/user.dart';
 import 'package:get/get.dart';
 
 class ApiService extends GetConnect {
@@ -11,7 +11,7 @@ class ApiService extends GetConnect {
   onInit() {
     httpClient.timeout = const Duration(seconds: 20);
     // CMD > ipconfig > Wireless LAN adapter Wi-Fi (IPv4 Address)
-    httpClient.baseUrl = 'http://192.168.1.12:5192';
+    httpClient.baseUrl = 'http://192.168.0.15:5192';
     // REQUEST
     httpClient.maxRedirects = 3;
     httpClient.addRequestModifier<dynamic>((request) {

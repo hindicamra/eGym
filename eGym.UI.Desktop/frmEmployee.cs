@@ -41,6 +41,11 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (selectedEmployee == null)
+                {
+                    MessageBox.Show("Morate odabrati korisnika");
+                    return;
+                }
                 await _service.Delete(new { id = selectedEmployee.EmployeeId });
 
                 dgvEmployee.DataSource = await _service.Get<List<EmployeeDTO>>(null, "/getAll");
@@ -57,6 +62,12 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (selectedEmployee == null)
+                {
+                    MessageBox.Show("Morate odabrati korisnika");
+                    return;
+                }
+
                 var request = new UpdateAccountRequest()
                 {
                     FirstName = txtName.Text,

@@ -1,8 +1,8 @@
-import 'package:egym_flutter/app/controllers/user_controller.dart';
-import 'package:egym_flutter/app/services/api_service.dart';
-import 'package:egym_flutter/app/models/termin_type.dart';
-import 'package:egym_flutter/app/models/user.dart';
-import 'package:egym_flutter/app/modules/home/controllers/termins_controller.dart';
+import 'package:egym_ui_mobile/app/controllers/user_controller.dart';
+import 'package:egym_ui_mobile/app/services/api_service.dart';
+import 'package:egym_ui_mobile/app/models/termin_type.dart';
+import 'package:egym_ui_mobile/app/models/user.dart';
+import 'package:egym_ui_mobile/app/modules/home/controllers/termins_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

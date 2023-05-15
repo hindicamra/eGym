@@ -1,4 +1,4 @@
-import 'package:egym_flutter/app/modules/registration/controllers/registration_controller.dart';
+import 'package:egym_ui_mobile/app/modules/registration/controllers/registration_controller.dart';
 
 enum UserRole { admin, employee, user }
 

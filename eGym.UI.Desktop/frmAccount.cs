@@ -64,6 +64,11 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (selectedUser == null)
+                {
+                    MessageBox.Show("Morate odabrati korisnika");
+                    return;
+                }
                 await _service.Delete(new { id = selectedUser.AccountId });
 
                 dgvAccount.DataSource = await _service.Get<List<AccountDTO>>(null, "/getAll");
@@ -80,6 +85,14 @@ namespace eGym.UI.Desktop
         {
             try
             {
+
+
+                if (selectedUser == null)
+                {
+                    MessageBox.Show("Morate odabrati korisnika");
+                    return;
+                }
+
                 var request = new UpdateAccountRequest()
                 {
                     FirstName = txtName.Text,

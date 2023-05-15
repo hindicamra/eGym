@@ -1,7 +1,7 @@
-import 'package:egym_flutter/app/controllers/user_controller.dart';
-import 'package:egym_flutter/app/modules/home/controllers/termins_controller.dart';
-import 'package:egym_flutter/app/services/api_service.dart';
-import 'package:egym_flutter/app/models/termin.dart';
+import 'package:egym_ui_mobile/app/controllers/user_controller.dart';
+import 'package:egym_ui_mobile/app/modules/home/controllers/termins_controller.dart';
+import 'package:egym_ui_mobile/app/services/api_service.dart';
+import 'package:egym_ui_mobile/app/models/termin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -100,7 +100,7 @@ class PaymentController extends GetxController {
 
     final response = await _api.post('/Payment/addPayment', {
       "description": paymentDesc,
-      "receiptEmail": user.email ?? 'egym_flutter@test.test',
+      "receiptEmail": user.email ?? 'egym_ui_mobile@test.test',
       "ccv": int.tryParse(paymentCvc),
       "currency": 'BAM',
       "amount": 1000,

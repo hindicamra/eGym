@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:egym_flutter/app/constants/app_colors.dart';
-import 'package:egym_flutter/app/services/api_service.dart';
-import 'package:egym_flutter/app/routes/app_pages.dart';
+import 'package:egym_ui_mobile/app/constants/app_colors.dart';
+import 'package:egym_ui_mobile/app/services/api_service.dart';
+import 'package:egym_ui_mobile/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

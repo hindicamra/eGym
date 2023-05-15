@@ -1,4 +1,4 @@
-import 'package:egym_flutter/app/models/user.dart';
+import 'package:egym_ui_mobile/app/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

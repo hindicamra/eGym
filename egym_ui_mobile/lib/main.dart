@@ -1,5 +1,5 @@
-import 'package:egym_flutter/app/constants/app_colors.dart';
-import 'package:egym_flutter/app/controllers/user_controller.dart';
+import 'package:egym_ui_mobile/app/constants/app_colors.dart';
+import 'package:egym_ui_mobile/app/controllers/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

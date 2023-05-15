@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:egym_flutter/app/constants/app_colors.dart';
-import 'package:egym_flutter/app/modules/home/controllers/termins_controller.dart';
-import 'package:egym_flutter/app/routes/app_pages.dart';
+import 'package:egym_ui_mobile/app/constants/app_colors.dart';
+import 'package:egym_ui_mobile/app/modules/home/controllers/termins_controller.dart';
+import 'package:egym_ui_mobile/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';

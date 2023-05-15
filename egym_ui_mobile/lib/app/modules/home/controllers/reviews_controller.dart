@@ -1,4 +1,4 @@
-import 'package:egym_flutter/app/services/api_service.dart';
+import 'package:egym_ui_mobile/app/services/api_service.dart';
 import 'package:get/get.dart';
 
 import '../../../models/feedback.dart';

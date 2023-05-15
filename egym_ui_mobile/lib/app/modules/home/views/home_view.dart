@@ -1,4 +1,4 @@
-import 'package:egym_flutter/app/modules/home/screens/edit_profile.dart';
+import 'package:egym_ui_mobile/app/modules/home/screens/edit_profile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

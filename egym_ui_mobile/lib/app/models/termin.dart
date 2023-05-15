@@ -1,4 +1,4 @@
-import 'package:egym_flutter/app/models/termin_type.dart';
+import 'package:egym_ui_mobile/app/models/termin_type.dart';
 
 class Termin {
   int reservationId;

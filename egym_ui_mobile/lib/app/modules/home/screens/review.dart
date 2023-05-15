@@ -1,5 +1,5 @@
-import 'package:egym_flutter/app/modules/home/controllers/reviews_controller.dart';
-import 'package:egym_flutter/app/routes/app_pages.dart';
+import 'package:egym_ui_mobile/app/modules/home/controllers/reviews_controller.dart';
+import 'package:egym_ui_mobile/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
