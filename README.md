@@ -31,6 +31,11 @@ Pored nabrojanih pristupnih podataka, u bazi podataka se mogu pronaci i ostali z
 4. Nakon sto se prethodna komanda uspjesno izvrsi, pokrenuti komandu `docker-compose up`, nakon cega ce biti pokrenuti containeri
 5. Testirati aplikacije
 
+Ukoliko mobile aplikacija nije u mogucnosti da komunicira sa backendom, tada je potrebno podesiti BaseURL u `api_service.dart` na liniji 14(https://github.com/hindicamra/eGym/blob/b4d6572888f2c858190a056796505251642942f9/egym_ui_mobile/lib/app/services/api_service.dart#L14) fajlu i to na sljedeci nacin:
+1. Otvoriti command prompt
+2. Ukucati `ipconfig`
+3. Kopirati IP adresu od Wireless LAN adapter Wi-Fi (IPv4 Address), te na nju dodati `:5192`
+
 ## Konekcija na bazu
 
 Otvoriti SSMS(SQL Server Managment Studio), te izvrsiti konekciju na bazu kao na slici
