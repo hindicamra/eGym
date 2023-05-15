@@ -73,30 +73,29 @@ public partial class DataBaseContext
            );
 
         modelBuilder.Entity<Training>().HasData(
-         new Training() { TrainingId = 1, Day = 2023 / 05 / 09, Meal = 1, Description = "Barbell bench press, 5 sets, 12 reps", AccountId = 1 },
-         new Training() { TrainingId = 2, Day = 2023 / 05 / 09, Meal = 2, Description = "Dumbbell shoulder press, 5 sets, 10 reps", AccountId = 1 },
-         new Training() { TrainingId = 4, Day = 2023 / 05 / 10, Meal = 2, Description = "Floor press, 4 sets, 10 reps ", AccountId = 3 },
-         new Training() { TrainingId = 5, Day = 2023 / 05 / 11, Meal = 3, Description = "Flexibility and stretching", AccountId = 3 },
-         new Training() { TrainingId = 6, Day = 2023 / 05 / 11, Meal = 2, Description = "Hammer Curls, 5 sets, 8 reps", AccountId = 5 },
-         new Training() { TrainingId = 7, Day = 2023 / 05 / 12, Meal = 2, Description = "Incline bench press, 3 sets, 12 reps", AccountId = 7 },
-         new Training() { TrainingId = 8, Day = 2023 / 05 / 12, Meal = 1, Description = "Close grip lat pulldown, 3 sets, 10 reps", AccountId = 8 },
-         new Training() { TrainingId = 9, Day = 2023 / 05 / 13, Meal = 2, Description = "Leg raises, 3 sets, 10 reps", AccountId = 8 },
-         new Training() { TrainingId = 10, Day = 2023 / 05 / 13, Meal = 3, Description = "Seated rows, 4 sets, 10 reps", AccountId = 8 }
+         new Training() { TrainingId = 1, Day = 2023 / 05 / 09, Description = "Barbell bench press, 5 sets, 12 reps", AccountId = 1 },
+         new Training() { TrainingId = 2, Day = 2023 / 05 / 09, Description = "Dumbbell shoulder press, 5 sets, 10 reps", AccountId = 1 },
+         new Training() { TrainingId = 4, Day = 2023 / 05 / 10, Description = "Floor press, 4 sets, 10 reps ", AccountId = 3 },
+         new Training() { TrainingId = 5, Day = 2023 / 05 / 11, Description = "Flexibility and stretching", AccountId = 3 },
+         new Training() { TrainingId = 6, Day = 2023 / 05 / 11, Description = "Hammer Curls, 5 sets, 8 reps", AccountId = 5 },
+         new Training() { TrainingId = 7, Day = 2023 / 05 / 12, Description = "Incline bench press, 3 sets, 12 reps", AccountId = 7 },
+         new Training() { TrainingId = 8, Day = 2023 / 05 / 12, Description = "Close grip lat pulldown, 3 sets, 10 reps", AccountId = 8 },
+         new Training() { TrainingId = 9, Day = 2023 / 05 / 13, Description = "Leg raises, 3 sets, 10 reps", AccountId = 8 },
+         new Training() { TrainingId = 10, Day = 2023 / 05 / 13, Description = "Seated rows, 4 sets, 10 reps", AccountId = 8 }
             );
 
         modelBuilder.Entity<Reservation>().HasData(
-        new Reservation() { ReservationId = 1, From = new DateTime(2023,05,09,12,00,00), To = new DateTime(2023, 05, 09, 13, 15, 00), Description = "I would like to do weight training.", Status = 1, AccountId = 1, EmployeeId = 3, ReservationType = 0},
-        new Reservation() { ReservationId = 2, From = new DateTime(2023, 05, 09, 14, 00, 00), To = new DateTime(2023, 05, 09, 15, 30, 00), Description = "I would like to do cardio.", Status = 2, AccountId = 2, EmployeeId = 5, ReservationType = 1},
-        new Reservation() { ReservationId = 3, From = new DateTime(2023, 05, 09, 16, 00, 00), To = new DateTime(2023, 05, 09, 17, 15, 00), Description = "Another description.", Status = 2, AccountId = 3, EmployeeId = 4, ReservationType = 3},
-        new Reservation() { ReservationId = 4, From = new DateTime(2023, 05, 10, 12, 00, 00), To = new DateTime(2023, 05, 09, 13, 15, 00), Description = "I would like to do strength training.", Status = 3, AccountId = 1, EmployeeId = 2, ReservationType = 0},
-        new Reservation() { ReservationId = 5, From = new DateTime(2023, 05, 10, 18, 00, 00), To = new DateTime(2023, 05, 09, 18, 15, 00), Description = "I want to dedicate more to this training.", Status = 4, AccountId = 4, EmployeeId = 9, ReservationType = 1},
-        new Reservation() { ReservationId = 6, From = new DateTime(2023, 05, 10, 19, 00, 00), To = new DateTime(2023, 05, 09, 20, 15, 00), Description = "Some description.",  Status = 2, AccountId = 6, EmployeeId = 7, ReservationType = 2},
-        new Reservation() { ReservationId = 7, From = new DateTime(2023, 05, 11, 13, 00, 00), To = new DateTime(2023, 05, 11, 14, 15, 00), Description = "I would like to do full-body workouts. ", Status = 1, AccountId = 3, EmployeeId = 10, ReservationType = 1},
-        new Reservation() { ReservationId = 8, From = new DateTime(2023, 05, 12, 16, 00, 00), To = new DateTime(2023, 05, 12, 17, 15, 00), Description = "I would like to do pilates training.", Status = 4, AccountId = 8, EmployeeId = 9, ReservationType = 3},
-        new Reservation() { ReservationId = 9, From = new DateTime(2023, 05, 12, 20, 00, 00), To = new DateTime(2023, 05, 12, 21, 15, 00), Description = "I would like to do balance and stability training.", Status = 3, AccountId = 7, EmployeeId = 6, ReservationType = 3},
-        new Reservation() { ReservationId = 10, From = new DateTime(2023, 05, 13, 13, 00, 00), To = new DateTime(2023, 05, 13, 14, 15, 00), Description = "I would like to do flexibility and mobility Training.", Status = 3, AccountId = 5, EmployeeId = 1, ReservationType = 2}
+        new Reservation() { ReservationId = 1, From = new DateTime(2023, 05, 09, 12, 00, 00), To = new DateTime(2023, 05, 09, 13, 15, 00), Description = "I would like to do weight training.", Status = 1, AccountId = 1, EmployeeId = 3, ReservationType = 0 },
+        new Reservation() { ReservationId = 2, From = new DateTime(2023, 05, 09, 14, 00, 00), To = new DateTime(2023, 05, 09, 15, 30, 00), Description = "I would like to do cardio.", Status = 2, AccountId = 2, EmployeeId = 5, ReservationType = 1 },
+        new Reservation() { ReservationId = 3, From = new DateTime(2023, 05, 09, 16, 00, 00), To = new DateTime(2023, 05, 09, 17, 15, 00), Description = "Another description.", Status = 2, AccountId = 3, EmployeeId = 4, ReservationType = 3 },
+        new Reservation() { ReservationId = 4, From = new DateTime(2023, 05, 10, 12, 00, 00), To = new DateTime(2023, 05, 09, 13, 15, 00), Description = "I would like to do strength training.", Status = 3, AccountId = 1, EmployeeId = 5, ReservationType = 0 },
+        new Reservation() { ReservationId = 5, From = new DateTime(2023, 05, 10, 18, 00, 00), To = new DateTime(2023, 05, 09, 18, 15, 00), Description = "I want to dedicate more to this training.", Status = 4, AccountId = 4, EmployeeId = 9, ReservationType = 1 },
+        new Reservation() { ReservationId = 6, From = new DateTime(2023, 05, 10, 19, 00, 00), To = new DateTime(2023, 05, 09, 20, 15, 00), Description = "Some description.", Status = 2, AccountId = 6, EmployeeId = 7, ReservationType = 2 },
+        new Reservation() { ReservationId = 7, From = new DateTime(2023, 05, 11, 13, 00, 00), To = new DateTime(2023, 05, 11, 14, 15, 00), Description = "I would like to do full-body workouts. ", Status = 1, AccountId = 3, EmployeeId = 10, ReservationType = 1 },
+        new Reservation() { ReservationId = 8, From = new DateTime(2023, 05, 12, 16, 00, 00), To = new DateTime(2023, 05, 12, 17, 15, 00), Description = "I would like to do pilates training.", Status = 4, AccountId = 8, EmployeeId = 9, ReservationType = 3 },
+        new Reservation() { ReservationId = 9, From = new DateTime(2023, 05, 12, 20, 00, 00), To = new DateTime(2023, 05, 12, 21, 15, 00), Description = "I would like to do balance and stability training.", Status = 3, AccountId = 7, EmployeeId = 6, ReservationType = 3 },
+        new Reservation() { ReservationId = 10, From = new DateTime(2023, 05, 13, 13, 00, 00), To = new DateTime(2023, 05, 13, 14, 15, 00), Description = "I would like to do flexibility and mobility Training.", Status = 3, AccountId = 5, EmployeeId = 1, ReservationType = 2 }
        );
 
     }
 }
-

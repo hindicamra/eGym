@@ -31,6 +31,7 @@ builder.Services.AddScoped<IDietService, DietService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<ITrainingService, TraningService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<IRecommendationService, RecommendationService>();
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<ChargeService>();
 builder.Services.AddScoped<TokenService>();
@@ -53,6 +54,22 @@ builder.Services.AddDbContext<DataBaseContext>(options =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAuthentication("BasicAuthentication")
               .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        name: "AllowOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
+});
+
+builder.Services.AddHttpClient("PdfDomain", client => {
+    client.BaseAddress = new Uri("https://localhost:7220/");
+});
 
 var app = builder.Build();
 

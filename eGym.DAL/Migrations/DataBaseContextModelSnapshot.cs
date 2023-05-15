@@ -66,7 +66,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 1,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7293),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9161),
                             Email = "user@test.com",
                             FirstName = "user",
                             Gender = 1,
@@ -78,7 +78,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 2,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7343),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9194),
                             Email = "lejla@husrep.com",
                             FirstName = "Lejla",
                             Gender = 1,
@@ -90,7 +90,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 3,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7345),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9196),
                             Email = "dino@pelic.com",
                             FirstName = "Dino",
                             Gender = 0,
@@ -102,7 +102,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 4,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7348),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9198),
                             Email = "amar@sehic.com",
                             FirstName = "Amar",
                             Gender = 0,
@@ -114,7 +114,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 5,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7350),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9201),
                             Email = "hana@babic.com",
                             FirstName = "Hana",
                             Gender = 1,
@@ -126,7 +126,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 6,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7353),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9203),
                             Email = "faris@kovacevic.com",
                             FirstName = "Faris",
                             Gender = 0,
@@ -138,7 +138,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 7,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7355),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9231),
                             Email = "arnesa@letica.com",
                             FirstName = "Arnesa",
                             Gender = 1,
@@ -150,7 +150,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 8,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7358),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9235),
                             Email = "envera@dedic.com",
                             FirstName = "Envera",
                             Gender = 1,
@@ -162,7 +162,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 9,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7360),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9236),
                             Email = "edis@zebic.com",
                             FirstName = "Edis",
                             Gender = 0,
@@ -174,7 +174,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             AccountId = 10,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7362),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9238),
                             Email = "dino@buric.com",
                             FirstName = "Dino",
                             Gender = 1,
@@ -402,7 +402,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 1,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7496),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9365),
                             Email = "desktop@test.com",
                             FirstName = "desktop",
                             Gender = 1,
@@ -414,7 +414,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 2,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7501),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9369),
                             Email = "mobile@test.com",
                             FirstName = "mobile",
                             Gender = 1,
@@ -426,7 +426,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 3,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7503),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9371),
                             Email = "employee@test.com",
                             FirstName = "employee",
                             Gender = 1,
@@ -438,7 +438,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 4,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7506),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9373),
                             Email = "nejla@hindic.com",
                             FirstName = "Nejla",
                             Gender = 1,
@@ -450,7 +450,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 5,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7508),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9375),
                             Email = "daris@hindic.com",
                             FirstName = "Daris",
                             Gender = 0,
@@ -462,7 +462,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 6,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7510),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9377),
                             Email = "edi@muratovic.com",
                             FirstName = "Edi",
                             Gender = 0,
@@ -474,7 +474,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 7,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7512),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9382),
                             Email = "emira@cilic.com",
                             FirstName = "Emira",
                             Gender = 1,
@@ -486,7 +486,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 8,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7515),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9384),
                             Email = "edin@mesic.com",
                             FirstName = "Edin",
                             Gender = 0,
@@ -498,7 +498,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 9,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7518),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9386),
                             Email = "amina@selimovic.com",
                             FirstName = "Amina",
                             Gender = 1,
@@ -510,7 +510,7 @@ namespace eGym.DAL.Migrations
                         new
                         {
                             EmployeeId = 10,
-                            BirthDate = new DateTime(2023, 5, 10, 16, 20, 45, 651, DateTimeKind.Local).AddTicks(7521),
+                            BirthDate = new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9388),
                             Email = "sara@zukic.com",
                             FirstName = "Sara",
                             Gender = 1,
@@ -760,7 +760,7 @@ namespace eGym.DAL.Migrations
                             ReservationId = 4,
                             AccountId = 1,
                             Description = "I would like to do strength training.",
-                            EmployeeId = 2,
+                            EmployeeId = 5,
                             From = new DateTime(2023, 5, 10, 12, 0, 0, 0, DateTimeKind.Unspecified),
                             ReservationType = 0,
                             Status = 3,
@@ -948,9 +948,6 @@ namespace eGym.DAL.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Meal")
-                        .HasColumnType("int");
-
                     b.HasKey("TrainingId");
 
                     b.HasIndex("AccountId");
@@ -963,72 +960,63 @@ namespace eGym.DAL.Migrations
                             TrainingId = 1,
                             AccountId = 1,
                             Day = 44,
-                            Description = "Barbell bench press, 5 sets, 12 reps",
-                            Meal = 1
+                            Description = "Barbell bench press, 5 sets, 12 reps"
                         },
                         new
                         {
                             TrainingId = 2,
                             AccountId = 1,
                             Day = 44,
-                            Description = "Dumbbell shoulder press, 5 sets, 10 reps",
-                            Meal = 2
+                            Description = "Dumbbell shoulder press, 5 sets, 10 reps"
                         },
                         new
                         {
                             TrainingId = 4,
                             AccountId = 3,
                             Day = 40,
-                            Description = "Floor press, 4 sets, 10 reps ",
-                            Meal = 2
+                            Description = "Floor press, 4 sets, 10 reps "
                         },
                         new
                         {
                             TrainingId = 5,
                             AccountId = 3,
                             Day = 36,
-                            Description = "Flexibility and stretching",
-                            Meal = 3
+                            Description = "Flexibility and stretching"
                         },
                         new
                         {
                             TrainingId = 6,
                             AccountId = 5,
                             Day = 36,
-                            Description = "Hammer Curls, 5 sets, 8 reps",
-                            Meal = 2
+                            Description = "Hammer Curls, 5 sets, 8 reps"
                         },
                         new
                         {
                             TrainingId = 7,
                             AccountId = 7,
                             Day = 33,
-                            Description = "Incline bench press, 3 sets, 12 reps",
-                            Meal = 2
+                            Description = "Incline bench press, 3 sets, 12 reps"
                         },
                         new
                         {
                             TrainingId = 8,
                             AccountId = 8,
                             Day = 33,
-                            Description = "Close grip lat pulldown, 3 sets, 10 reps",
-                            Meal = 1
+                            Description = "Close grip lat pulldown, 3 sets, 10 reps"
                         },
                         new
                         {
                             TrainingId = 9,
                             AccountId = 8,
                             Day = 31,
-                            Description = "Leg raises, 3 sets, 10 reps",
-                            Meal = 2
+                            Description = "Leg raises, 3 sets, 10 reps"
                         },
                         new
                         {
                             TrainingId = 10,
                             AccountId = 8,
                             Day = 31,
-                            Description = "Seated rows, 4 sets, 10 reps",
-                            Meal = 3
+                            Description = "Seated rows, 4 sets, 10 reps"
                         });
                 });
 
