@@ -74,10 +74,10 @@ namespace eGym.DAL.Migrations
                 {
                     { 4, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9373), "nejla@hindic.com", "Nejla", 1, "Hindic", "nejla123", 1, "nejlah" },
                     { 5, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9375), "daris@hindic.com", "Daris", 0, "Hindic", "daris123", 1, "darish" },
-                    { 6, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9377), "edi@muratovic.com", "Edi", 0, "Muratovic", "edi123", 2, "edim" },
+                    { 6, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9377), "edi@muratovic.com", "Edi", 0, "Muratovic", "edi123", 0, "edim" },
                     { 7, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9382), "emira@cilic.com", "Emira", 1, "Cilic", "emira123", 0, "emiram" },
-                    { 8, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9384), "edin@mesic.com", "Edin", 0, "Mesic", "edin123", 2, "edin" },
-                    { 9, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9386), "amina@selimovic.com", "Amina", 1, "Selimovic", "amina123", 2, "aminas" },
+                    { 8, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9384), "edin@mesic.com", "Edin", 0, "Mesic", "edin123", 0, "edin" },
+                    { 9, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9386), "amina@selimovic.com", "Amina", 1, "Selimovic", "amina123", 1, "aminas" },
                     { 10, new DateTime(2023, 5, 14, 16, 52, 54, 301, DateTimeKind.Local).AddTicks(9388), "sara@zukic.com", "Sara", 1, "Zukic", "sara123", 1, "saraz" }
                 });
 

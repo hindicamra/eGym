@@ -26,10 +26,10 @@ public partial class DataBaseContext
             new Employee() { EmployeeId = 3, Username = "employee", FirstName = "employee", Password = "test", BirthDate = DateTime.Now, LastName = "employee", Email = "employee@test.com", Gender = 1, Role = 1 },
             new Employee() { EmployeeId = 4, Username = "nejlah", FirstName = "Nejla", Password = "nejla123", BirthDate = DateTime.Now, LastName = "Hindic", Email = "nejla@hindic.com", Gender = 1, Role = 1 },
             new Employee() { EmployeeId = 5, Username = "darish", FirstName = "Daris", Password = "daris123", BirthDate = DateTime.Now, LastName = "Hindic", Email = "daris@hindic.com", Gender = 0, Role = 1 },
-            new Employee() { EmployeeId = 6, Username = "edim", FirstName = "Edi", Password = "edi123", BirthDate = DateTime.Now, LastName = "Muratovic", Email = "edi@muratovic.com", Gender = 0, Role = 2 },
+            new Employee() { EmployeeId = 6, Username = "edim", FirstName = "Edi", Password = "edi123", BirthDate = DateTime.Now, LastName = "Muratovic", Email = "edi@muratovic.com", Gender = 0, Role = 0 },
             new Employee() { EmployeeId = 7, Username = "emiram", FirstName = "Emira", Password = "emira123", BirthDate = DateTime.Now, LastName = "Cilic", Email = "emira@cilic.com", Gender = 1, Role = 0 },
-            new Employee() { EmployeeId = 8, Username = "edin", FirstName = "Edin", Password = "edin123", BirthDate = DateTime.Now, LastName = "Mesic", Email = "edin@mesic.com", Gender = 0, Role = 2 },
-            new Employee() { EmployeeId = 9, Username = "aminas", FirstName = "Amina", Password = "amina123", BirthDate = DateTime.Now, LastName = "Selimovic", Email = "amina@selimovic.com", Gender = 1, Role = 2 },
+            new Employee() { EmployeeId = 8, Username = "edin", FirstName = "Edin", Password = "edin123", BirthDate = DateTime.Now, LastName = "Mesic", Email = "edin@mesic.com", Gender = 0, Role = 0 },
+            new Employee() { EmployeeId = 9, Username = "aminas", FirstName = "Amina", Password = "amina123", BirthDate = DateTime.Now, LastName = "Selimovic", Email = "amina@selimovic.com", Gender = 1, Role = 1 },
             new Employee() { EmployeeId = 10, Username = "saraz", FirstName = "Sara", Password = "sara123", BirthDate = DateTime.Now, LastName = "Zukic", Email = "sara@zukic.com", Gender = 1, Role = 1 }
            );
 
