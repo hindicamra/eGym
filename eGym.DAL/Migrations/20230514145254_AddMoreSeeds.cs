@@ -113,8 +113,8 @@ namespace eGym.DAL.Migrations
                 columns: new[] { "TrainingId", "AccountId", "Day", "Description" },
                 values: new object[,]
                 {
-                    { 1, 1, 44, "Barbell bench press, 5 sets, 12 reps" },
-                    { 2, 1, 44, "Dumbbell shoulder press, 5 sets, 10 reps" }
+                    { 1, 1, 0, "Barbell bench press, 5 sets, 12 reps" },
+                    { 2, 1, 2, "Dumbbell shoulder press, 5 sets, 10 reps" }
                 });
 
             migrationBuilder.InsertData(
@@ -168,13 +168,13 @@ namespace eGym.DAL.Migrations
                 columns: new[] { "TrainingId", "AccountId", "Day", "Description" },
                 values: new object[,]
                 {
-                    { 4, 3, 40, "Floor press, 4 sets, 10 reps " },
-                    { 5, 3, 36, "Flexibility and stretching" },
-                    { 6, 5, 36, "Hammer Curls, 5 sets, 8 reps" },
-                    { 7, 7, 33, "Incline bench press, 3 sets, 12 reps" },
-                    { 8, 8, 33, "Close grip lat pulldown, 3 sets, 10 reps" },
-                    { 9, 8, 31, "Leg raises, 3 sets, 10 reps" },
-                    { 10, 8, 31, "Seated rows, 4 sets, 10 reps" }
+                    { 4, 3, 3, "Floor press, 4 sets, 10 reps " },
+                    { 5, 3, 5, "Flexibility and stretching" },
+                    { 6, 5, 3, "Hammer Curls, 5 sets, 8 reps" },
+                    { 7, 7, 5, "Incline bench press, 3 sets, 12 reps" },
+                    { 8, 8, 1, "Close grip lat pulldown, 3 sets, 10 reps" },
+                    { 9, 8, 6, "Leg raises, 3 sets, 10 reps" },
+                    { 10, 8, 2, "Seated rows, 4 sets, 10 reps" }
                 });
         }
 

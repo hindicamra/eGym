@@ -73,15 +73,15 @@ public partial class DataBaseContext
            );
 
         modelBuilder.Entity<Training>().HasData(
-         new Training() { TrainingId = 1, Day = 2023 / 05 / 09, Description = "Barbell bench press, 5 sets, 12 reps", AccountId = 1 },
-         new Training() { TrainingId = 2, Day = 2023 / 05 / 09, Description = "Dumbbell shoulder press, 5 sets, 10 reps", AccountId = 1 },
-         new Training() { TrainingId = 4, Day = 2023 / 05 / 10, Description = "Floor press, 4 sets, 10 reps ", AccountId = 3 },
-         new Training() { TrainingId = 5, Day = 2023 / 05 / 11, Description = "Flexibility and stretching", AccountId = 3 },
-         new Training() { TrainingId = 6, Day = 2023 / 05 / 11, Description = "Hammer Curls, 5 sets, 8 reps", AccountId = 5 },
-         new Training() { TrainingId = 7, Day = 2023 / 05 / 12, Description = "Incline bench press, 3 sets, 12 reps", AccountId = 7 },
-         new Training() { TrainingId = 8, Day = 2023 / 05 / 12, Description = "Close grip lat pulldown, 3 sets, 10 reps", AccountId = 8 },
-         new Training() { TrainingId = 9, Day = 2023 / 05 / 13, Description = "Leg raises, 3 sets, 10 reps", AccountId = 8 },
-         new Training() { TrainingId = 10, Day = 2023 / 05 / 13, Description = "Seated rows, 4 sets, 10 reps", AccountId = 8 }
+         new Training() { TrainingId = 1, Day = 0, Description = "Barbell bench press, 5 sets, 12 reps", AccountId = 1 },
+         new Training() { TrainingId = 2, Day = 2, Description = "Dumbbell shoulder press, 5 sets, 10 reps", AccountId = 1 },
+         new Training() { TrainingId = 4, Day = 3, Description = "Floor press, 4 sets, 10 reps ", AccountId = 3 },
+         new Training() { TrainingId = 5, Day = 5, Description = "Flexibility and stretching", AccountId = 3 },
+         new Training() { TrainingId = 6, Day = 3, Description = "Hammer Curls, 5 sets, 8 reps", AccountId = 5 },
+         new Training() { TrainingId = 7, Day = 5, Description = "Incline bench press, 3 sets, 12 reps", AccountId = 7 },
+         new Training() { TrainingId = 8, Day = 1, Description = "Close grip lat pulldown, 3 sets, 10 reps", AccountId = 8 },
+         new Training() { TrainingId = 9, Day = 6, Description = "Leg raises, 3 sets, 10 reps", AccountId = 8 },
+         new Training() { TrainingId = 10, Day = 2, Description = "Seated rows, 4 sets, 10 reps", AccountId = 8 }
             );
 
         modelBuilder.Entity<Reservation>().HasData(
