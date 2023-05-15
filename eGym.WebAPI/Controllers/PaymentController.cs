@@ -35,6 +35,11 @@ public class PaymentController : ControllerBase
 
             var response = await _paymentService.CheckUserProfile(accountId);
 
+            if(response == null)
+            {
+                return NotFound("Account doesn't have customer profile created");
+            }
+
             return Ok(response);
         }
         catch (Exception ex)
