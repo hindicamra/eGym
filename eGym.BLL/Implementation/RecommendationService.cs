@@ -21,6 +21,7 @@ public class RecommendationService : IRecommendationService
 
         if (accountReservations.Any())
         {
+
             //Add recommendations for most reserved reservation type and most reserved employee
             var reservationType = accountReservations.GroupBy(x => x.ReservationType).OrderByDescending(t => t.Count()).FirstOrDefault().Key;
             var employeeId = accountReservations.GroupBy(x => x.EmployeeId).OrderByDescending(t => t.Count()).FirstOrDefault().Key;

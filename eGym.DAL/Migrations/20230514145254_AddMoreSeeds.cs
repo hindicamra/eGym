@@ -125,7 +125,7 @@ namespace eGym.DAL.Migrations
                     { 4, 3, 2, "Grilled chicken and salad", 2 },
                     { 5, 3, 5, "Protein shake", 3 },
                     { 6, 5, 2, "Grilled chicken and salad", 2 },
-                    { 7, 7, 4, "Pasta with chicken and green salad", 4 },
+                    { 7, 7, 4, "Pasta with chicken and green salad", 2 },
                     { 8, 8, 2, "Eggs and dairy", 1 },
                     { 9, 8, 3, "Pasta with chicken and green salad", 2 },
                     { 10, 8, 6, "Protein shake", 3 }
