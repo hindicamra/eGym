@@ -43,6 +43,11 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (selectedTraining == null)
+                {
+                    MessageBox.Show("Morate odabrati trening");
+                    return;
+                }
                 var request = new UpdateTrainingRequest()
                 {
                     Day = (DayOfWeek)cmbDay.SelectedIndex,
@@ -50,7 +55,7 @@ namespace eGym.UI.Desktop
                 };
 
                 await _service.Put<TrainingDTO>(selectedTraining.TrainingId, request);
-
+                dgvTraining.DataSource = await _service.Get<List<TrainingDTO>>(new { userId = selectedUser.AccountId }, "/getUserTraningPlan");
                 MessageBox.Show("Uspjesno updatovan");
             }
             catch (Exception ex)
@@ -113,6 +118,7 @@ namespace eGym.UI.Desktop
             }
             frmCreateNewTraining frm = new frmCreateNewTraining(selectedUser);
             frm.Show();
+            this.Hide();
         }
     }
 }

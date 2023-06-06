@@ -95,7 +95,7 @@ namespace eGym.UI.Desktop
 
             frm.Show();
 
-            //this.Close();
+            this.Close();
         }
 
         private void dgvEmployee_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -43,6 +43,12 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (selectedDiet == null)
+                {
+                    MessageBox.Show("Morate odabrati obrok");
+                    return;
+                }
+
                 var request = new UpdateDietRequest()
                 {
                     Day = (DayOfWeek)cmbDay.SelectedIndex,
@@ -51,7 +57,7 @@ namespace eGym.UI.Desktop
                 };
 
                 await _service.Put<DietDTO>(selectedDiet.DietId, request);
-
+                dgvDiet.DataSource = await _service.Get<List<DietDTO>>(new { userId = selectedUser.AccountId }, "/getByUserId");
                 MessageBox.Show("Uspjesno updatovan");
             }
             catch (Exception ex)
@@ -96,6 +102,7 @@ namespace eGym.UI.Desktop
             };
             frmCreateNewDiet frm = new frmCreateNewDiet(selectedUser);
             frm.Show();
+            this.Hide();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)

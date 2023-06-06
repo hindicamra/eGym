@@ -28,6 +28,7 @@ namespace eGym.UI.Desktop
                 await _service.Post<TrainingDTO>(request);
 
                 MessageBox.Show("Uspjesno kreiran");
+                this.Close();
             }
             catch (Exception ex)
             {

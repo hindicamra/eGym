@@ -116,8 +116,9 @@ namespace eGym.UI.Desktop
 
         private void btnCreateEmployee_Click(object sender, EventArgs e)
         {
-            frmCreateAccount frm = new frmCreateAccount();
+            frmCreateAccount frm = new frmCreateAccount(); 
             frm.Show();
+            this.Hide();
         }
     }
 }

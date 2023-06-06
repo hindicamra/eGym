@@ -29,6 +29,7 @@ namespace eGym.UI.Desktop
                 await _service.Post<DietDTO>(request);
 
                 MessageBox.Show("Uspjesno kreiran");
+                this.Close();
             }
             catch(Exception ex)
             {

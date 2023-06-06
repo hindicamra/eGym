@@ -41,9 +41,9 @@ namespace eGym.DAL.Migrations
                 columns: new[] { "DietId", "AccountId", "Day", "Description", "Meal" },
                 values: new object[,]
                 {
-                    { 1, 1, 44, "Eggs and dairy", 1 },
-                    { 2, 1, 44, "Grilled chicken and salad", 2 },
-                    { 3, 1, 40, "Protein shake", 3 }
+                    { 1, 1, 1, "Eggs and dairy", 1 },
+                    { 2, 1, 2, "Grilled chicken and salad", 2 },
+                    { 3, 1, 0, "Protein shake", 3 }
                 });
 
             migrationBuilder.UpdateData(
@@ -122,13 +122,13 @@ namespace eGym.DAL.Migrations
                 columns: new[] { "DietId", "AccountId", "Day", "Description", "Meal" },
                 values: new object[,]
                 {
-                    { 4, 3, 40, "Grilled chicken and salad", 2 },
-                    { 5, 3, 36, "Protein shake", 3 },
-                    { 6, 5, 36, "Grilled chicken and salad", 2 },
-                    { 7, 7, 33, "Pasta with chicken and green salad", 2 },
-                    { 8, 8, 33, "Eggs and dairy", 1 },
-                    { 9, 8, 31, "Pasta with chicken and green salad", 2 },
-                    { 10, 8, 31, "Protein shake", 3 }
+                    { 4, 3, 2, "Grilled chicken and salad", 2 },
+                    { 5, 3, 5, "Protein shake", 3 },
+                    { 6, 5, 2, "Grilled chicken and salad", 2 },
+                    { 7, 7, 4, "Pasta with chicken and green salad", 4 },
+                    { 8, 8, 2, "Eggs and dairy", 1 },
+                    { 9, 8, 3, "Pasta with chicken and green salad", 2 },
+                    { 10, 8, 6, "Protein shake", 3 }
                 });
 
             migrationBuilder.InsertData(

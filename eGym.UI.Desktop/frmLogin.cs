@@ -28,7 +28,7 @@ namespace eGym.UI.Desktop
                 frmMain frm = new frmMain();
                 frm.Show();
 
-                //this.Close();
+                this.Hide();
             }
             catch (Exception ex)
             {

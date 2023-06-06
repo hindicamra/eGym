@@ -47,16 +47,16 @@ public partial class DataBaseContext
             );
 
         modelBuilder.Entity<Diet>().HasData(
-         new Diet() { DietId = 1, Day = 2023 / 05 / 09, Meal = 1, Description = "Eggs and dairy", AccountId = 1 },
-         new Diet() { DietId = 2, Day = 2023 / 05 / 09, Meal = 2, Description = "Grilled chicken and salad", AccountId = 1 },
-         new Diet() { DietId = 3, Day = 2023 / 05 / 10, Meal = 3, Description = "Protein shake", AccountId = 1 },
-         new Diet() { DietId = 4, Day = 2023 / 05 / 10, Meal = 2, Description = "Grilled chicken and salad", AccountId = 3 },
-         new Diet() { DietId = 5, Day = 2023 / 05 / 11, Meal = 3, Description = "Protein shake", AccountId = 3 },
-         new Diet() { DietId = 6, Day = 2023 / 05 / 11, Meal = 2, Description = "Grilled chicken and salad", AccountId = 5 },
-         new Diet() { DietId = 7, Day = 2023 / 05 / 12, Meal = 2, Description = "Pasta with chicken and green salad", AccountId = 7 },
-         new Diet() { DietId = 8, Day = 2023 / 05 / 12, Meal = 1, Description = "Eggs and dairy", AccountId = 8 },
-         new Diet() { DietId = 9, Day = 2023 / 05 / 13, Meal = 2, Description = "Pasta with chicken and green salad", AccountId = 8 },
-         new Diet() { DietId = 10, Day = 2023 / 05 / 13, Meal = 3, Description = "Protein shake", AccountId = 8 }
+         new Diet() { DietId = 1, Day = 1, Meal = 1, Description = "Eggs and dairy", AccountId = 1 },
+         new Diet() { DietId = 2, Day = 2, Meal = 2, Description = "Grilled chicken and salad", AccountId = 1 },
+         new Diet() { DietId = 3, Day = 5, Meal = 3, Description = "Protein shake", AccountId = 1 },
+         new Diet() { DietId = 4, Day = 3, Meal = 2, Description = "Grilled chicken and salad", AccountId = 3 },
+         new Diet() { DietId = 5, Day = 0, Meal = 3, Description = "Protein shake", AccountId = 3 },
+         new Diet() { DietId = 6, Day = 1, Meal = 2, Description = "Grilled chicken and salad", AccountId = 5 },
+         new Diet() { DietId = 7, Day = 4, Meal = 2, Description = "Pasta with chicken and green salad", AccountId = 7 },
+         new Diet() { DietId = 8, Day = 2, Meal = 1, Description = "Eggs and dairy", AccountId = 8 },
+         new Diet() { DietId = 9, Day = 3, Meal = 2, Description = "Pasta with chicken and green salad", AccountId = 8 },
+         new Diet() { DietId = 10, Day = 6, Meal = 3, Description = "Protein shake", AccountId = 8 }
          );
 
         modelBuilder.Entity<Feedback>().HasData(

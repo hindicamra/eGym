@@ -28,7 +28,7 @@ namespace eGym.UI.Desktop
                 }
 
                 await _service.Put<ReservationDTO>(selectedReservation.ReservationId, "/confirm");
-
+                dgvReservations.DataSource = await _service.Get<List<ReservationDTO>>(new { employeeId = logedEmployee.EmployeeId, date = dtpDate.Value }, "/GetPendingReservation");
                 MessageBox.Show("Reservacija potvrdjena");
             }
             catch(Exception ex)
@@ -70,8 +70,9 @@ namespace eGym.UI.Desktop
                 }
 
                 await _service.Put<ReservationDTO>(selectedReservation.ReservationId, "/decline");
-
+                dgvReservations.DataSource = await _service.Get<List<ReservationDTO>>(new { employeeId = logedEmployee.EmployeeId, date = dtpDate.Value }, "/GetPendingReservation");
                 MessageBox.Show("Reservacija odbijena");
+
             }
             catch(Exception) 
             {
