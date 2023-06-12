@@ -73,7 +73,7 @@
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnFinance);
             this.Name = "frmReport";
-            this.Text = "frmIzvjestaji";
+            this.Text = "Izvjestaji";
             this.ResumeLayout(false);
 
         }

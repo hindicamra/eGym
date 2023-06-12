@@ -32,6 +32,12 @@ namespace eGym.UI.Desktop
             }
             catch (FlurlHttpException ex)
             {
+                if (ex.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate pravo pristupa");
+                    throw ex;
+                }
+
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
@@ -54,6 +60,11 @@ namespace eGym.UI.Desktop
             }
             catch (FlurlHttpException ex)
             {
+                if(ex.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate pravo pristupa");
+                    throw ex;
+                }
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
@@ -82,6 +93,12 @@ namespace eGym.UI.Desktop
             }
             catch (FlurlHttpException ex)
             {
+                if (ex.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate pravo pristupa");
+                    throw ex;
+                }
+
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
@@ -103,6 +120,12 @@ namespace eGym.UI.Desktop
             }
             catch (FlurlHttpException ex)
             {
+                if (ex.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate pravo pristupa");
+                    throw ex; 
+                }
+
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
@@ -118,6 +141,7 @@ namespace eGym.UI.Desktop
 
         public async Task<T> Get<T>(object search = null, string path = "")
         {
+
             var query = "";
             if (search != null)
             {
