@@ -154,9 +154,9 @@ namespace eGym.DAL.Migrations
                 {
                     { 2, 2, "I would like to do cardio.", 5, new DateTime(2023, 5, 9, 14, 0, 0, 0, DateTimeKind.Unspecified), 1, 2, new DateTime(2023, 5, 9, 15, 30, 0, 0, DateTimeKind.Unspecified) },
                     { 3, 3, "Another description.", 4, new DateTime(2023, 5, 9, 16, 0, 0, 0, DateTimeKind.Unspecified), 3, 2, new DateTime(2023, 5, 9, 17, 15, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, 1, "I would like to do strength training.", 5, new DateTime(2023, 5, 10, 12, 0, 0, 0, DateTimeKind.Unspecified), 0, 3, new DateTime(2023, 5, 9, 13, 15, 0, 0, DateTimeKind.Unspecified) },
-                    { 5, 4, "I want to dedicate more to this training.", 9, new DateTime(2023, 5, 10, 18, 0, 0, 0, DateTimeKind.Unspecified), 1, 4, new DateTime(2023, 5, 9, 18, 15, 0, 0, DateTimeKind.Unspecified) },
-                    { 6, 6, "Some description.", 7, new DateTime(2023, 5, 10, 19, 0, 0, 0, DateTimeKind.Unspecified), 2, 2, new DateTime(2023, 5, 9, 20, 15, 0, 0, DateTimeKind.Unspecified) },
+                    { 4, 1, "I would like to do strength training.", 5, new DateTime(2023, 5, 10, 12, 0, 0, 0, DateTimeKind.Unspecified), 0, 3, new DateTime(2023, 5, 10, 13, 15, 0, 0, DateTimeKind.Unspecified) },
+                    { 5, 4, "I want to dedicate more to this training.", 9, new DateTime(2023, 5, 10, 18, 0, 0, 0, DateTimeKind.Unspecified), 1, 4, new DateTime(2023, 5, 10, 18, 15, 0, 0, DateTimeKind.Unspecified) },
+                    { 6, 6, "Some description.", 7, new DateTime(2023, 5, 10, 19, 0, 0, 0, DateTimeKind.Unspecified), 2, 2, new DateTime(2023, 5, 10, 20, 15, 0, 0, DateTimeKind.Unspecified) },
                     { 7, 3, "I would like to do full-body workouts. ", 10, new DateTime(2023, 5, 11, 13, 0, 0, 0, DateTimeKind.Unspecified), 1, 1, new DateTime(2023, 5, 11, 14, 15, 0, 0, DateTimeKind.Unspecified) },
                     { 8, 8, "I would like to do pilates training.", 9, new DateTime(2023, 5, 12, 16, 0, 0, 0, DateTimeKind.Unspecified), 3, 4, new DateTime(2023, 5, 12, 17, 15, 0, 0, DateTimeKind.Unspecified) },
                     { 9, 7, "I would like to do balance and stability training.", 6, new DateTime(2023, 5, 12, 20, 0, 0, 0, DateTimeKind.Unspecified), 3, 3, new DateTime(2023, 5, 12, 21, 15, 0, 0, DateTimeKind.Unspecified) },
