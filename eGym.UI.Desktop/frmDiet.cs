@@ -64,7 +64,7 @@ namespace eGym.UI.Desktop
             this.Hide();
         }
 
-        private void dgvDiet_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDiet_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             var diet = dgvDiet.Rows[index].DataBoundItem as DietDTO;

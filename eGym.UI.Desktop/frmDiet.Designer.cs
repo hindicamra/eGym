@@ -87,7 +87,6 @@
             this.dgvDiet.Size = new System.Drawing.Size(428, 453);
             this.dgvDiet.TabIndex = 44;
             this.dgvDiet.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiet_CellContentDoubleClick);
-            this.dgvDiet.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiet_CellDoubleClick);
             // 
             // label7
             // 
