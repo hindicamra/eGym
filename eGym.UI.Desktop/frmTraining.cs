@@ -39,69 +39,14 @@ namespace eGym.UI.Desktop
             }
         }
 
-        private async void btnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (selectedTraining == null)
-                {
-                    MessageBox.Show("Morate odabrati trening");
-                    return;
-                }
-                var request = new UpdateTrainingRequest()
-                {
-                    Day = (DayOfWeek)cmbDay.SelectedIndex,
-                    Description = rtxtDescription.Text
-                };
-
-                await _service.Put<TrainingDTO>(selectedTraining.TrainingId, request);
-                dgvTraining.DataSource = await _service.Get<List<TrainingDTO>>(new { userId = selectedUser.AccountId }, "/getUserTraningPlan");
-                MessageBox.Show("Uspjesno updatovan");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Desila se greska");
-            }
-        }
-
         private async void dgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             selectedUser = dgvAccount.Rows[index].DataBoundItem as AccountDTO;
 
-            txtName.Text = selectedUser.FirstName + " " + selectedUser.LastName;
-
             try
             {
                 dgvTraining.DataSource = await _service.Get<List<TrainingDTO>>(new { userId = selectedUser.AccountId }, "/getUserTraningPlan");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Desila se greska");
-            }
-        }
-
-        private void dgvTraining_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            selectedTraining = dgvTraining.Rows[index].DataBoundItem as TrainingDTO;
-
-            cmbDay.SelectedIndex = (int)selectedTraining.Day;
-            rtxtDescription.Text = selectedTraining.Description;
-        }
-
-        private async void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                await _service.Delete(selectedTraining.TrainingId);
-
-                dgvTraining.DataSource = await _service.Get<List<TrainingDTO>>(new { userId = selectedUser.AccountId }, "/getUserTraningPlan");
-                cmbDay.SelectedIndex = 0;
-                cmbDay.SelectedIndex = 0;
-                rtxtDescription.Text = "";
-
-                MessageBox.Show("Uspjesno obrisan unos");
             }
             catch (Exception ex)
             {
@@ -117,6 +62,16 @@ namespace eGym.UI.Desktop
                 return;
             }
             frmCreateNewTraining frm = new frmCreateNewTraining(selectedUser);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void dgvTraining_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            var training = dgvTraining.Rows[index].DataBoundItem as TrainingDTO;
+
+            frmEditTraining frm = new frmEditTraining(training, selectedUser.FirstName + " " + selectedUser.LastName);
             frm.Show();
             this.Hide();
         }

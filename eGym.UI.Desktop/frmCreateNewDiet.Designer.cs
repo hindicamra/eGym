@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbMeal = new System.Windows.Forms.ComboBox();
             this.cmbDay = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMeal
@@ -85,6 +88,7 @@
             this.rtxtDescription.Size = new System.Drawing.Size(320, 197);
             this.rtxtDescription.TabIndex = 50;
             this.rtxtDescription.Text = "";
+            this.rtxtDescription.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxDescription_Validating);
             // 
             // txtName
             // 
@@ -139,6 +143,10 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Kreiraj novi unos ishrane";
             // 
+            // errorProviderApp
+            // 
+            this.errorProviderApp.ContainerControl = this;
+            // 
             // frmCreateNewDiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -157,6 +165,7 @@
             this.Name = "frmCreateNewDiet";
             this.Text = "Kreiraj novi unos";
             this.Load += new System.EventHandler(this.frmCreateNewDiet_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +183,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private ErrorProvider errorProviderApp;
     }
 }

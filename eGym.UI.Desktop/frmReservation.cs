@@ -1,6 +1,5 @@
 ﻿using eGym.BLL.Models;
 using eGym.BLL.Models.Requests;
-using eGym.Domain;
 
 namespace eGym.UI.Desktop
 {

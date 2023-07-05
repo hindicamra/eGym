@@ -1,5 +1,6 @@
 ﻿using eGym.BLL.Models;
 using eGym.BLL.Models.Requests;
+using System.ComponentModel;
 
 namespace eGym.UI.Desktop
 {
@@ -18,6 +19,18 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (!ValidateChildren(ValidationConstraints.Enabled))
+                {
+                    MessageBox.Show("Morate unijete opis treninga");
+                    return;
+                }
+
+                if (cmbDay.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Morate odabrati dan");
+                    return;
+                }
+
                 var request = new CreateTrainingRequest()
                 {
                     AccountId = selectedUser.AccountId,
@@ -39,6 +52,21 @@ namespace eGym.UI.Desktop
         private void frmCreateNewTraining_Load(object sender, EventArgs e)
         {
             txtName.Text = selectedUser.FirstName + " " + selectedUser.LastName;
+        }
+
+        private void textBoxDescription_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(rtxtDescription.Text))
+            {
+                e.Cancel = true;
+                rtxtDescription.Focus();
+                errorProviderApp.SetError(rtxtDescription, "Morate unijeti username");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(rtxtDescription, "");
+            }
         }
     }
 }

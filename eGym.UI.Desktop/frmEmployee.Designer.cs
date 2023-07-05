@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
             this.btnCreateEmployee = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -53,7 +54,9 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEmployee
@@ -126,6 +129,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(682, 88);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(250, 27);
             this.txtId.TabIndex = 7;
             // 
@@ -143,6 +147,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(250, 27);
             this.txtName.TabIndex = 9;
+            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxName_Validating);
             // 
             // btnDelete
             // 
@@ -178,6 +183,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(250, 27);
             this.txtLastName.TabIndex = 13;
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxLastName_Validating);
             // 
             // label5
             // 
@@ -254,6 +260,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(250, 27);
             this.txtUsername.TabIndex = 22;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxUserName_Validating);
             // 
             // txtPassword
             // 
@@ -261,6 +268,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(250, 27);
             this.txtPassword.TabIndex = 23;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPassword_Validating);
             // 
             // comboBox1
             // 
@@ -272,6 +280,10 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(250, 28);
             this.comboBox1.TabIndex = 24;
+            // 
+            // errorProviderApp
+            // 
+            this.errorProviderApp.ContainerControl = this;
             // 
             // frmEmployee
             // 
@@ -307,6 +319,7 @@
             this.Text = "Zaposlenici";
             this.Load += new System.EventHandler(this.frmEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +352,6 @@
         private TextBox txtUsername;
         private TextBox txtPassword;
         private ComboBox comboBox1;
+        private ErrorProvider errorProviderApp;
     }
 }

@@ -29,7 +29,10 @@ namespace eGym.UI.Desktop
             try
             {
                 var token = await _service.Get<Token>(null, "/token");
-                Process.Start(new ProcessStartInfo($"{APIService._endpoint}Report/employees?token={token.Key}") { UseShellExecute = true });
+                if(token != null)
+                {
+                    Process.Start(new ProcessStartInfo($"{APIService._endpoint}Report/employees?token={token.Key}") { UseShellExecute = true });
+                }
             }
             catch (Exception ex)
             {

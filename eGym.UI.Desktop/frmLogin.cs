@@ -1,4 +1,6 @@
 ﻿using eGym.BLL.Models.Requests;
+using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace eGym.UI.Desktop
 {
@@ -13,6 +15,12 @@ namespace eGym.UI.Desktop
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            if (!ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show("Morate unijete username i password");
+                return;
+            }
+
             APIService.Username = txbUsername.Text;
             APIService.Password = txbPassword.Text;
 
@@ -32,7 +40,37 @@ namespace eGym.UI.Desktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Wrong username or password");
+                MessageBox.Show("Pogresan username ili password");
+            }
+        }
+
+        private void textBoxUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txbUsername.Text))
+            {
+                e.Cancel = true;
+                txbUsername.Focus();
+                errorProviderApp.SetError(txbUsername, "Morate unijeti username");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txbUsername, "");
+            }
+        }
+
+        private void textBoxPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txbPassword.Text))
+            {
+                e.Cancel = true;
+                txbUsername.Focus();
+                errorProviderApp.SetError(txbPassword, "Morate unijeti password");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txbUsername, "");
             }
         }
     }

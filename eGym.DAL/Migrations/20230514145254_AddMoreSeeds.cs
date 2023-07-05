@@ -43,7 +43,7 @@ namespace eGym.DAL.Migrations
                 {
                     { 1, 1, 1, "Eggs and dairy", 1 },
                     { 2, 1, 2, "Grilled chicken and salad", 2 },
-                    { 3, 1, 0, "Protein shake", 3 }
+                    { 3, 1, 0, "Protein shake", 0 }
                 });
 
             migrationBuilder.UpdateData(
@@ -123,12 +123,12 @@ namespace eGym.DAL.Migrations
                 values: new object[,]
                 {
                     { 4, 3, 2, "Grilled chicken and salad", 2 },
-                    { 5, 3, 5, "Protein shake", 3 },
+                    { 5, 3, 5, "Protein shake", 0 },
                     { 6, 5, 2, "Grilled chicken and salad", 2 },
                     { 7, 7, 4, "Pasta with chicken and green salad", 2 },
                     { 8, 8, 2, "Eggs and dairy", 1 },
                     { 9, 8, 3, "Pasta with chicken and green salad", 2 },
-                    { 10, 8, 6, "Protein shake", 3 }
+                    { 10, 8, 6, "Protein shake", 0 }
                 });
 
             migrationBuilder.InsertData(

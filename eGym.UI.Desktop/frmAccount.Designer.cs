@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +52,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnCreateEmployee = new System.Windows.Forms.Button();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -60,6 +63,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(250, 27);
             this.txtPassword.TabIndex = 48;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPassword_Validating);
             // 
             // txtUsername
             // 
@@ -67,6 +71,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(250, 27);
             this.txtUsername.TabIndex = 47;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxUserName_Validating);
             // 
             // dateTimePicker1
             // 
@@ -135,6 +140,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(250, 27);
             this.txtLastName.TabIndex = 38;
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxLastName_Validating);
             // 
             // label4
             // 
@@ -170,6 +176,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(250, 27);
             this.txtName.TabIndex = 34;
+            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxName_Validating);
             // 
             // label3
             // 
@@ -183,6 +190,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(699, 89);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(250, 27);
             this.txtId.TabIndex = 32;
             // 
@@ -252,6 +260,10 @@
             this.dgvAccount.TabIndex = 25;
             this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             // 
+            // errorProviderApp
+            // 
+            this.errorProviderApp.ContainerControl = this;
+            // 
             // frmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -284,6 +296,7 @@
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.frmAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +327,6 @@
         private TextBox txtSearch;
         private Button btnCreateEmployee;
         private DataGridView dgvAccount;
+        private ErrorProvider errorProviderApp;
     }
 }

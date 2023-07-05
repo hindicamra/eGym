@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbUsername = new System.Windows.Forms.TextBox();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +62,7 @@
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(196, 27);
             this.txbUsername.TabIndex = 2;
+            this.txbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxUserName_Validating);
             // 
             // txbPassword
             // 
@@ -67,6 +71,7 @@
             this.txbPassword.Size = new System.Drawing.Size(196, 27);
             this.txbPassword.TabIndex = 3;
             this.txbPassword.UseSystemPasswordChar = true;
+            this.txbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPassword_Validating);
             // 
             // btnLogin
             // 
@@ -77,6 +82,10 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // errorProviderApp
+            // 
+            this.errorProviderApp.ContainerControl = this;
             // 
             // frmLogin
             // 
@@ -90,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +112,6 @@
         private TextBox txbUsername;
         private TextBox txbPassword;
         private Button btnLogin;
+        private ErrorProvider errorProviderApp;
     }
 }

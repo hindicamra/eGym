@@ -1,5 +1,4 @@
 ﻿using eGym.BLL.Models;
-using eGym.BLL.Models.Requests;
 
 namespace eGym.UI.Desktop
 {
@@ -8,7 +7,6 @@ namespace eGym.UI.Desktop
         private readonly APIService _service = new APIService("Diet");
         private readonly APIService _userService = new APIService("Account");
         private AccountDTO selectedUser;
-        private DietDTO selectedDiet;
 
         public frmDiet()
         {
@@ -39,39 +37,10 @@ namespace eGym.UI.Desktop
             }
         }
 
-        private async void btnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (selectedDiet == null)
-                {
-                    MessageBox.Show("Morate odabrati obrok");
-                    return;
-                }
-
-                var request = new UpdateDietRequest()
-                {
-                    Day = (DayOfWeek)cmbDay.SelectedIndex,
-                    Meal = (BLL.Models.Enums.Meal)cmbMeal.SelectedIndex,
-                    Description = rtxtDescription.Text
-                };
-
-                await _service.Put<DietDTO>(selectedDiet.DietId, request);
-                dgvDiet.DataSource = await _service.Get<List<DietDTO>>(new { userId = selectedUser.AccountId }, "/getByUserId");
-                MessageBox.Show("Uspjesno updatovan");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Desila se greska");
-            }
-        }
-
         private async void dgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             selectedUser = dgvAccount.Rows[index].DataBoundItem as AccountDTO;
-
-            txtName.Text = selectedUser.FirstName + " " + selectedUser.LastName;
 
             try
             {
@@ -81,16 +50,6 @@ namespace eGym.UI.Desktop
             {
                 MessageBox.Show("Desila se greska");
             }
-        }
-
-        private void dgvDiet_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            selectedDiet = dgvDiet.Rows[index].DataBoundItem as DietDTO;
-
-            cmbDay.SelectedIndex = (int)selectedDiet.Day;
-            cmbMeal.SelectedIndex = (int)selectedDiet.Meal;
-            rtxtDescription.Text = selectedDiet.Description;
         }
 
         private void btnCreateNew_Click(object sender, EventArgs e)
@@ -105,23 +64,14 @@ namespace eGym.UI.Desktop
             this.Hide();
         }
 
-        private async void btnDelete_Click(object sender, EventArgs e)
+        private void dgvDiet_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                await _service.Delete(selectedDiet.DietId);
+            int index = e.RowIndex;
+            var diet = dgvDiet.Rows[index].DataBoundItem as DietDTO;
 
-                dgvDiet.DataSource = await _service.Get<List<DietDTO>>(new { userId = selectedUser.AccountId }, "/getByUserId");
-                cmbDay.SelectedIndex = 0;
-                cmbDay.SelectedIndex = 0;
-                rtxtDescription.Text = "";
-
-                MessageBox.Show("Uspjesno obrisan unos");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Desila se greska");
-            }
+            frmEditDiet frm = new frmEditDiet(diet, selectedUser.FirstName + " " + selectedUser.LastName);
+            frm.Show();
+            this.Hide();
         }
     }
 }

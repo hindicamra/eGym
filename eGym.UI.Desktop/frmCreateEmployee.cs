@@ -1,5 +1,6 @@
 ﻿using eGym.BLL.Models;
 using eGym.BLL.Models.Requests;
+using System.ComponentModel;
 
 namespace eGym.UI.Desktop
 {
@@ -16,6 +17,24 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (!ValidateChildren(ValidationConstraints.Enabled))
+                {
+                    MessageBox.Show("Morate unijete sva obavezna polja");
+                    return;
+                }
+
+                if (!rbFemale.Checked && !rbMale.Checked)
+                {
+                    MessageBox.Show("Morate odabrati pol");
+                    return;
+                }
+
+                if (cbRole.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Morate odabrati rolu");
+                    return;
+                }
+
                 var request = new CreateEmployeeRequest
                 {
                     FirstName = txtName.Text,
@@ -43,6 +62,81 @@ namespace eGym.UI.Desktop
             catch(Exception ex) 
             {
                 MessageBox.Show("Desila se greska");
+            }
+        }
+
+        private void textBoxName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                e.Cancel = true;
+                txtName.Focus();
+                errorProviderApp.SetError(txtName, "Morate unijeti ime");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txtName, "");
+            }
+        }
+
+        private void textBoxLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                e.Cancel = true;
+                txtLastName.Focus();
+                errorProviderApp.SetError(txtLastName, "Morate unijeti prezime");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txtLastName, "");
+            }
+        }
+
+        private void textBoxUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                e.Cancel = true;
+                txtUsername.Focus();
+                errorProviderApp.SetError(txtUsername, "Morate unijeti username");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txtUsername, "");
+            }
+        }
+
+        private void textBoxPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                e.Cancel = true;
+                txtUsername.Focus();
+                errorProviderApp.SetError(txtPassword, "Morate unijeti password");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txtUsername, "");
+            }
+        }
+
+        private void textBoxEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@"))
+            {
+                e.Cancel = true;
+                txtUsername.Focus();
+                errorProviderApp.SetError(txtPassword, "Morate unijeti ispravan email");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(txtUsername, "");
             }
         }
     }

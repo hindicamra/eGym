@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbDay = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -43,88 +35,9 @@
             this.dgvTraining = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCreateNewTraining = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTraining)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmbDay
-            // 
-            this.cmbDay.FormattingEnabled = true;
-            this.cmbDay.Items.AddRange(new object[] {
-            "Nedjelja",
-            "Ponedjeljak",
-            "Utorak",
-            "Srijeda",
-            "Cetvrtak",
-            "Petak",
-            "Subota"});
-            this.cmbDay.Location = new System.Drawing.Point(1170, 205);
-            this.cmbDay.Name = "cmbDay";
-            this.cmbDay.Size = new System.Drawing.Size(320, 28);
-            this.cmbDay.TabIndex = 56;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(1388, 539);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(102, 36);
-            this.btnSave.TabIndex = 55;
-            this.btnSave.Text = "Spasi";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // rtxtDescription
-            // 
-            this.rtxtDescription.Location = new System.Drawing.Point(1170, 285);
-            this.rtxtDescription.Name = "rtxtDescription";
-            this.rtxtDescription.Size = new System.Drawing.Size(320, 197);
-            this.rtxtDescription.TabIndex = 54;
-            this.rtxtDescription.Text = "";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(1170, 122);
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(320, 27);
-            this.txtName.TabIndex = 53;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1066, 288);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 20);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Opis";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1066, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 20);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Dan";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1066, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Klijent";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1228, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Plan treninga";
             // 
             // label1
             // 
@@ -173,7 +86,7 @@
             this.dgvTraining.RowTemplate.Height = 29;
             this.dgvTraining.Size = new System.Drawing.Size(428, 453);
             this.dgvTraining.TabIndex = 57;
-            this.dgvTraining.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTraining_CellClick);
+            this.dgvTraining.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTraining_CellDoubleClick);
             // 
             // label5
             // 
@@ -195,33 +108,14 @@
             this.btnCreateNewTraining.UseVisualStyleBackColor = true;
             this.btnCreateNewTraining.Click += new System.EventHandler(this.btnCreateNewTraining_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(1262, 539);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(102, 36);
-            this.btnDelete.TabIndex = 60;
-            this.btnDelete.Text = "Obrisi";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // frmTraining
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 615);
-            this.Controls.Add(this.btnDelete);
+            this.ClientSize = new System.Drawing.Size(1025, 605);
             this.Controls.Add(this.btnCreateNewTraining);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvTraining);
-            this.Controls.Add(this.cmbDay);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.rtxtDescription);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -237,14 +131,6 @@
         }
 
         #endregion
-        private ComboBox cmbDay;
-        private Button btnSave;
-        private RichTextBox rtxtDescription;
-        private TextBox txtName;
-        private Label label6;
-        private Label label4;
-        private Label label3;
-        private Label label2;
         private Label label1;
         private Button btnSearch;
         private TextBox txtSearch;
@@ -252,6 +138,5 @@
         private DataGridView dgvTraining;
         private Label label5;
         private Button btnCreateNewTraining;
-        private Button btnDelete;
     }
 }

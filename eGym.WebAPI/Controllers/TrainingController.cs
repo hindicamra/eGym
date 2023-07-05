@@ -22,6 +22,7 @@ public class TrainingController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize(Roles = "Employee,User")]
     public async Task<IActionResult> GetById(int id)
     {
         try
@@ -47,6 +48,7 @@ public class TrainingController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize(Roles = "Employee,User")]
     [Route("getUserTraningPlan")]
     public async Task<IActionResult> GetUserTraningPlan(int userId)
     {
@@ -73,6 +75,7 @@ public class TrainingController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Employee,User")]
     public async Task<IActionResult> Create(CreateTrainingRequest request)
     {
         try
@@ -95,6 +98,7 @@ public class TrainingController : ControllerBase
     }
 
     [HttpPut]
+    [Authorize(Roles = "Employee,User")]
     public async Task<IActionResult> Update(UpdateTrainingRequest request, int id)
     {
         try
@@ -117,6 +121,7 @@ public class TrainingController : ControllerBase
     }
 
     [HttpDelete]
+    [Authorize(Roles = "Employee,User")]
     public async Task<IActionResult> Delete(int id)
     {
         try

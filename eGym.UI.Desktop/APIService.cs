@@ -1,5 +1,6 @@
 ﻿using eGym.UI.Desktop.Properties;
 using Flurl.Http;
+using Stripe;
 using System.Text;
 
 namespace eGym.UI.Desktop
@@ -35,7 +36,6 @@ namespace eGym.UI.Desktop
                 if (ex.StatusCode == 403)
                 {
                     MessageBox.Show("Nemate pravo pristupa");
-                    throw ex;
                 }
 
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
@@ -63,7 +63,6 @@ namespace eGym.UI.Desktop
                 if(ex.StatusCode == 403)
                 {
                     MessageBox.Show("Nemate pravo pristupa");
-                    throw ex;
                 }
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
@@ -96,7 +95,6 @@ namespace eGym.UI.Desktop
                 if (ex.StatusCode == 403)
                 {
                     MessageBox.Show("Nemate pravo pristupa");
-                    throw ex;
                 }
 
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
@@ -123,7 +121,6 @@ namespace eGym.UI.Desktop
                 if (ex.StatusCode == 403)
                 {
                     MessageBox.Show("Nemate pravo pristupa");
-                    throw ex; 
                 }
 
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
@@ -135,22 +132,32 @@ namespace eGym.UI.Desktop
                 }
 
                 MessageBox.Show(stringBuilder.ToString(), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //return default;
             }
         }
 
         public async Task<T> Get<T>(object search = null, string path = "")
         {
-
-            var query = "";
-            if (search != null)
+            try
             {
-                query = await search.ToQueryString();
+                var query = "";
+                if (search != null)
+                {
+                    query = await search.ToQueryString();
+                }
+
+                var list = await $"{_endpoint}{_resource}{path}?{query}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
+
+                return list;
             }
+            catch(FlurlHttpException ex)
+            {
+                if (ex.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate pravo pristupa");
+                }
 
-            var list = await $"{_endpoint}{_resource}{path}?{query}".WithBasicAuth(Username, Password).GetJsonAsync<T>();
-
-            return list;
+                return default;
+            }
         }
 
         public async Task<T> GetById<T>(int id)
@@ -176,9 +183,19 @@ namespace eGym.UI.Desktop
 
         public async Task Delete(object id)
         {
-            var query =  await id.ToQueryString();
+            try
+            {
+                var query = await id.ToQueryString();
 
-            var result = await $"{_endpoint}{_resource}?{query}".WithBasicAuth(Username, Password).DeleteAsync();
+                var result = await $"{_endpoint}{_resource}?{query}".WithBasicAuth(Username, Password).DeleteAsync();
+            }
+            catch (FlurlHttpException ex)
+            {
+                if (ex.StatusCode == 403)
+                {
+                    MessageBox.Show("Nemate pravo pristupa");
+                }
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using eGym.BLL.Models;
 using eGym.BLL.Models.Requests;
+using System.ComponentModel;
 
 namespace eGym.UI.Desktop
 {
@@ -18,6 +19,24 @@ namespace eGym.UI.Desktop
         {
             try
             {
+                if (!ValidateChildren(ValidationConstraints.Enabled))
+                {
+                    MessageBox.Show("Morate unijete opis obroka");
+                    return;
+                }
+
+                if (cmbDay.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Morate odabrati dan");
+                    return;
+                }
+
+                if (cmbMeal.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Morate odabrati obrok");
+                    return;
+                }
+
                 var request = new CreateDietRequest()
                 {
                     AccountId = selectedUser.AccountId,
@@ -40,6 +59,21 @@ namespace eGym.UI.Desktop
         private void frmCreateNewDiet_Load(object sender, EventArgs e)
         {
             txtName.Text = txtName.Text = selectedUser.FirstName + " " + selectedUser.LastName;
+        }
+
+        private void textBoxDescription_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(rtxtDescription.Text))
+            {
+                e.Cancel = true;
+                rtxtDescription.Focus();
+                errorProviderApp.SetError(rtxtDescription, "Morate unijeti opis");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderApp.SetError(rtxtDescription, "");
+            }
         }
     }
 }
